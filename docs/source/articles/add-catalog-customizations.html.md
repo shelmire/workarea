@@ -5,7 +5,10 @@ excerpt: This guide shows you how to implement user-defined customizations for t
 
 # Add Catalog Customizations
 
-Customizations are pre-defined fields in your product that users can edit and create custom versions of your projects, such as for custom engravings.
+Customizations are pre-defined fields for your product that customers can use to create personalized, custom versions of that product. Some examples of how these have been used include:
+* Custom engravings for jewelry
+* Monograms for shirts
+* Email addresses for digital gift cards 
 
 ## Step 1: Create a `Catalog::Customizations` subclass
 
