@@ -12,7 +12,7 @@ Customizations are pre-defined fields for your product that customers can use to
 
 ## Step 1: Create a `Catalog::Customizations` subclass
 
-The first step is to subclass `Workarea::Catalog::Customizations` with something descriptive of your customization. In this case, we'll be using the concept of an "engraving" for jewelry or other metal products:
+The first step is to subclass `Workarea::Catalog::Customizations` with something descriptive of your customization. In this case, we'll be using the concept of an "engraving" for jewelry:
 
 ```ruby
 module Workarea
