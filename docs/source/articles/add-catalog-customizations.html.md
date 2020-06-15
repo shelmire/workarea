@@ -15,6 +15,7 @@ Customizations are pre-defined fields for your product that customers can use to
 The first step is to subclass `Workarea::Catalog::Customizations` with something descriptive of your customization. In this case, we'll be using the concept of an "engraving" for jewelry:
 
 ```ruby
+# app/models/workarea/catalog/customizations/engraving.rb
 module Workarea
   module Catalog
     class Customizations::Engraving < Customizations
