@@ -26,7 +26,7 @@ module Workarea
 end
 ```
 
-This validates the `:initials` field when products that use this customization are ordered.
+You can use any of the standard Rails `ActiveModel` validations in your `Customizations` subclass.
 
 ## Step 2: Apply Customizations to the Product
 
