@@ -5,14 +5,19 @@ excerpt: This guide shows you how to implement user-defined customizations for t
 
 # Add Catalog Customizations
 
-Customizations are pre-defined fields for your product that customers can use to create personalized, custom versions of that product. Some examples of how these have been used include:
+Customizations are pre-defined fields for your product that customers can use
+to create personalized, custom versions of that product. Some examples of how
+these have been used include:
+
 * Custom engravings for jewelry
 * Monograms for shirts
 * Email addresses for digital gift cards 
 
 ## Step 1: Create a `Catalog::Customizations` subclass
 
-The first step is to subclass `Workarea::Catalog::Customizations` with something descriptive of your customization. In this case, we'll be using the concept of an "engraving" for jewelry:
+The first step is to subclass `Workarea::Catalog::Customizations` with
+something descriptive of your customization. In this case, we'll be using the
+concept of an "engraving" for jewelry:
 
 ```ruby
 # app/models/workarea/catalog/customizations/engraving.rb
@@ -26,22 +31,25 @@ module Workarea
 end
 ```
 
-You can use any of the standard Rails `ActiveModel` validations in your `Customizations` subclass.
+You can use any of the standard Rails `ActiveModel` validations in your
+`Customizations` subclass.
 
 ## Step 2: Apply Customizations to the Product
 
-Choose the product that you wish to apply customizations on, and set the `:customizations` field on the model:
+Choose the product that you wish to apply customizations on, and set the
+`:customizations` field on the model:
 
 ```ruby
 product = Workarea::Catalog::Product.find('0-XABC12345')
-product.update! customizations: 'engraving'
+product.update!(customizations: 'engraving')
 ```
 
 Now, any time someone orders this product, they will have the option to engrave it.
 
 ## Step 3: (optional) Apply a Pricing SKU to the Customization.
 
-To charge for customizations, you can use a `Pricing::Sku` and set prices on that SKU, then provide the SKU in your customizations' attributes:
+To charge for customizations, you can use a `Pricing::Sku` and set prices on
+that SKU, then provide the SKU in your customizations' attributes:
 
 ```ruby
 module Workarea
@@ -58,4 +66,5 @@ module Workarea
 end
 ```
 
-If this SKU matches one in the database, the price will be applied to the item when ordered in the cart.
+If this SKU matches one in the database, the price will be applied to the item
+when ordered in the cart.
