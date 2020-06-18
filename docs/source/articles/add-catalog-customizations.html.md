@@ -63,7 +63,7 @@ product.update!(customizations: 'engraving')
 
 (You can also do this in the admin)
 
-Now, any time someone orders this product, they will have the option to engrave
+Now, any time someone adds this product to their cart, they will have the option to engrave
 it. All input from the customer is validated according to the rules specified
 in your subclass. When valid and the item is added to cart, these customized
 attributes are stored on the `Order::Item` like so:
